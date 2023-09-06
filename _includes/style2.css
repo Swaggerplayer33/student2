@@ -1,0 +1,7 @@
+/* Set a background image for the navigation bar */
+.navbar {
+              background-image: url('/images/ink.png');
+              background-size: 3; 
+
+  }
+          
