@@ -1,8 +1,9 @@
 ---
 comments: True
+toc: true
 layout: post
 title: Review Ticket
-description: My accomplishments throughout the 
+description: My accomplishments throughout the week
 type: tangibles
 courses: { compsci: {week: 2}}
 ---
