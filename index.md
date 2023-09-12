@@ -1,13 +1,24 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Random Background with Descriptions</title>
     <style>
         body {
-            background-image: url('https://t4.ftcdn.net/jpg/04/26/52/71/360_F_426527111_59QersN3ayDJ7Sfa5qwnKkp4l1O5tuAp.jpg'); /* Replace with your image path */
-            background-size: cover; /* Adjust as needed */
-            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            /* Set initial background image or color */
+            background: url('initial-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #description {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white; /* Set text color to white */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -51,7 +62,44 @@
 <li><a href="https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae">Hacks(Todo)</a> enable you to stay in focus with key requirements of the class.  Each Hack will produce Tangibles.</li>
 <li>Tangibles or <a href="https://en.wikipedia.org/wiki/Artifact_(software_development">Tangible Artifacts</a>) are things you accumulate as a learner and coder. </li>
 </ul>
+   <div id="description"></div>
+    <script>
+        // Define an array of background image URLs and their descriptions
+        const backgrounds = [
+            {
+                url: 'https://assets3.cbsnewsstatic.com/hub/i/r/2021/08/02/ad96efb4-2405-4b26-a093-41993790fc6c/thumbnail/640x637/166bb875d83de6a901c48b798342d0e8/eaglenebula.jpg?v=181d27d1e918a6408b48ea2e220df310',
+                description: 'These are the pillars of creation, found deep in the Eagle nebula',
+            },
+            {
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3fSb1i3y_a1WGSsRcpCllRJhsYDU3w0RNJw&usqp=CAU',
+                description: 'This is the Rho Ophiuchi nebula, a home to millions of baby stars',
+            },
+            {
+                url: 'https://sm.mashable.com/t/mashable_in/photo/default/crab-nebula-mosaic_pvft.720.jpg',
+                description: 'This is the crab nebula',
+            },
+            {
+                url: 'https://media.cnn.com/api/v1/images/stellar/prod/230907143646-spacex-starship.jpg?c=16x9&q=h_720,w_1280,c_fill',
+                description: 'This is the SpaceX starship, my favorite rocket. Its mission is to land on Mars',
+            },
+            // Add more image URLs and descriptions as needed
+        ];
+
+        // Function to set a random background image and description
+        function setRandomBackground() {
+            const randomIndex = Math.floor(Math.random() * backgrounds.length);
+            const randomBackground = backgrounds[randomIndex];
+            document.body.style.backgroundImage = `url('${randomBackground.url}')`;
+            const descriptionElement = document.getElementById('description');
+            descriptionElement.textContent = randomBackground.description;
+            descriptionElement.style.color = 'white'; // Set text color to white
+        }
+
+        // Call the function to set a random background and description when the page loads
+        window.addEventListener('load', setRandomBackground);
+    </script>
 </body>
 </html>
+
 
 
